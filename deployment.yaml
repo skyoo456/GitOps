@@ -14,6 +14,8 @@ spec:
       labels:
         app: gitops-nginx
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
-      - image: nginx
-        name: nginx
+      - name: nginx
+        image: 192.168.1.10:8443/echo-ip 
